@@ -1,79 +1,114 @@
 // Import necessary dependencies and components
-
 import { FaShieldAlt, FaTruck, FaUser } from 'react-icons/fa';
 import CountUp from 'react-countup';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 // FeaturesSection component
 const FeaturesSection = () => {
-  
+  return ( 
+<>
 
-  return (
-    <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-8 mt-8">
-      {/* Features Section */}
-      <div className="flex flex-col items-center lg:items-start mb-8 lg:mb-0">
-        {/* Feature Card 1 */}
-        <div className="mb-4 lg:w-72">
-          <div className="feature-card">
-            <FaShieldAlt className="icon" />
-            <h3>Parcel Safety</h3>
-            <p className="text-center lg:text-left">Ensuring the safety and security of your parcels throughout the delivery process.</p>
-          </div>
-        </div>
-
-        {/* Feature Card 2 */}
-        <div className="mb-4 lg:w-72">
-          <div className="feature-card">
-            <FaTruck className="icon" />
-            <h3>Super Fast Delivery</h3>
-            <p className="text-center lg:text-left">Swift and efficient delivery services to get your parcels to their destination in record time.</p>
-          </div>
-        </div>
-
-        {/* Feature Card 3 - User Friendly */}
-        <div className="mb-4 lg:w-72">
-          <div className="feature-card">
-            <FaUser className="icon" />
-            <h3>User Friendly</h3>
-            <p className="text-center lg:text-left">A user-friendly experience for easy parcel management and tracking.</p>
+<h1 className="text-xl md:text-6xl text-center mb-10 font-semibold bg-gradient-to-r from-green-900 via-green-500 to-green-100  text-transparent   bg-clip-text">Our Features </h1>
+    <div className='md:pt-24 md:pb-14'>
+     
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-8/12 mx-auto">
+      {/* Feature Card 1 */}
+      <div
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="card bg-gradient-to-r from-[#A2C579] to-[#557C55] text-primary-content hover:shadow-lg transform hover:scale-105 transition duration-300"
+      >
+        <div className="card-body">
+          <FaShieldAlt className="icon text-xl text-green-900" />
+          <h2 className="card-title">Parcel Safety</h2>
+          <p>
+            Ensuring the safety and security of your parcels throughout the delivery process.
+          </p>
+          <div className="card-actions justify-center">
+            <button className="btn ">Book Now</button>
           </div>
         </div>
       </div>
 
-      {/* Statistics Section */}
-      <div className="flex flex-col items-center lg:items-end">
-        {/* Stat Card 1 - Parcels Booked */}
-        <div className="mb-4">
-          <div className="stat-card">
-            <h3>
-              <CountUp end={6} duration={2} />
-            </h3>
-            <p>Parcels Booked</p>
+      {/* Feature Card 2 */}
+      <div
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="card bg-gradient-to-r from-[#A2C579] to-[#557C55] text-primary-content hover:shadow-lg transform hover:scale-105 transition duration-300"
+      >
+        <div className="card-body">
+          <FaTruck className="icon text-xl text-green-900" />
+          <h2 className="card-title">Super Fast Delivery</h2>
+          <p>
+            Swift and efficient delivery services to get your parcels to their destination in record
+            time.
+          </p>
+          <div className="card-actions justify-center">
+            <button className="btn btn-outline">Book Now</button>
           </div>
         </div>
+      </div>
 
-        {/* Stat Card 2 - Parcels Delivered */}
-        <div className="mb-4">
-          <div className="stat-card">
-            <h3>
-              <CountUp end={8} duration={2} />
-            </h3>
-            <p>Parcels Delivered</p>
-          </div>
-        </div>
-
-        {/* Stat Card 3 - Users Registered */}
-        <div>
-          <div className="stat-card">
-            <h3>
-              <CountUp end={9} duration={2} />
-            </h3>
-            <p>Users Registered</p>
+      {/* Feature Card 3 - User Friendly */}
+      <div
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        className="card bg-gradient-to-r from-[#A2C579] to-[#557C55] text-primary-content hover:shadow-lg transform hover:scale-105 transition duration-300"
+      >
+        <div className="card-body">
+          <FaUser className="icon text-xl text-green-900" />
+          <h2 className="card-title">User Friendly</h2>
+          <p>A user-friendly experience for easy parcel management and tracking.</p>
+          <div className="card-actions justify-center">
+            <button className="btn">Book Now</button>
           </div>
         </div>
       </div>
     </div>
+      {/* Statistics Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center lg:items-end w-7/12 mx-auto mt-8 mb-9">
+        {/* Stat Card 1 - Parcels Booked */}
+        <div
+          className="stat-card font-semibold rounded-e-2xl rounded-t-xl p-2 bg-pink-200 hover:shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          <h3 className="text-red-500">
+            <CountUp end={7900} duration={10} />
+          </h3>
+          <p>Parcels Booked</p>
+        </div>
+
+        {/* Stat Card 2 - Parcels Delivered */}
+        <div
+          className="stat-card font-semibold rounded-e-2xl rounded-t-xl p-2 bg-blue-200 hover:shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          <h3 className="text-red-500">
+            <CountUp end={5000} duration={10} />
+          </h3>
+          <p>Parcels Delivered</p>
+        </div>
+
+        {/* Stat Card 3 - Users Registered */}
+        <div
+          className="stat-card font-semibold rounded-e-2xl rounded-t-xl p-2 bg-orange-200 hover:shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          <h3 className="text-red-500">
+            <CountUp end={4} duration={10} />
+          </h3>
+          <p>Users Registered</p>
+        </div>
+      </div>
+    </div>
+
+</>
   );
 };
 
 // Export the component
 export default FeaturesSection;
+
