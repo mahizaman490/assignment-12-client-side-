@@ -5,7 +5,7 @@ const DeliveryMan = ({ deliveryMan }) => {
     const { name, image, parcelsDelivered, averageRatings } = deliveryMan;
 
     return (
-        <div className="bg-[#F2FFE9] relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none transition-transform transform hover:scale-105">
+        <div className=" bg-[#F2FFE9] relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none transition-transform transform hover:scale-105">
             <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
                     src={image}

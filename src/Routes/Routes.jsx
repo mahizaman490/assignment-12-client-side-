@@ -8,6 +8,11 @@ import Error from '../errPage/Error';
 import Home from '../pages/Home/Home';
 import LogIn from '../pages/Login/LogIn';
 import Register from '../pages/Register/Register';
+import Dashboard from '../Layout/Dashboard';
+import BookAparcel from '../pages/Dashboard/bookAparcel/BookAparcel';
+import Myprofile from '../pages/Dashboard/Myprofile';
+import PrivateRoutes from '../private/PrivateRoutes';
+
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +32,28 @@ export const router = createBrowserRouter([
         path:'/register',
         element:<Register></Register>,
     },
-    ],
+    // {
+    //     path:'/dashboard',
+    //     element:<Dashboard></Dashboard>,
+    // },
+    ],  
   },
+
+{
+  path: 'dashboard',
+  element:<PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
+  children:[
+    {
+      path:'bookAparcel',
+      element:<BookAparcel></BookAparcel>
+    },
+    {
+      path:'myProfile',
+      element:<Myprofile></Myprofile>
+    }
+
+  ]
+}
+
+
 ]);

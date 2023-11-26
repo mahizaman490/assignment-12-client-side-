@@ -23,7 +23,7 @@ const TopDeliveryMans = () => {
     }, []);
 
     return (
-        <div className="mt-36">
+        <div className="mt-36 mb-60">
             <div className="w-5/12 mx-auto text-center">
                 <h1 className="text-xl mb-2 md:text-6xl text-center font-semibold bg-gradient-to-r from-green-600 via-green-400 to-green-300  text-transparent   bg-clip-text">Top Delivery Man </h1>
                 <small className="mb-4 bg-gradient-to-r from-green-500 via-green-400 to-green-300  text-transparent  bg-clip-text font-extrabold">
@@ -36,6 +36,7 @@ const TopDeliveryMans = () => {
                 {deliveryMans.map(deliveryMan => <DeliveryMan key={deliveryMan._id} deliveryMan={deliveryMan} />)}
             </div>
         </div>
+    
     );
 };
 
