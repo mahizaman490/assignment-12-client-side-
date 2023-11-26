@@ -31,7 +31,7 @@ const FeaturesSection = () => {
             Ensuring the safety and security of your parcels throughout the delivery process.
           </p>
           <div className="card-actions justify-center">
-            <button className="btn ">Book Now</button>
+            
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const FeaturesSection = () => {
             time.
           </p>
           <div className="card-actions justify-center">
-            <button className="btn btn-outline">Book Now</button>
+           
           </div>
         </div>
       </div>
@@ -61,14 +61,14 @@ const FeaturesSection = () => {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500"
-        className="card bg-gradient-to-r from-[#A2C579] to-[#557C55] text-primary-content hover:shadow-lg transform hover:scale-105 transition duration-300"
+        className="card  bg-gradient-to-r from-[#A2C579] to-[#557C55] text-primary-content hover:shadow-lg transform hover:scale-105 transition duration-300"
       >
-        <div className="card-body">
+        <div className="card-body ">
           <FaUser className="icon text-xl text-green-900" />
-          <h2 className="card-title">User Friendly</h2>
+          <h2 className="card-title text-center">User Friendly</h2>
           <p>A user-friendly experience for easy parcel management and tracking.</p>
           <div className="card-actions justify-center">
-            <button className="btn">Book Now</button>
+            
           </div>
         </div>
       </div>

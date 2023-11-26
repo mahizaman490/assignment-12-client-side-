@@ -1,8 +1,26 @@
-# React + Vite
+My website name is: BD-parcel-management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My website link: []
 
-Currently, two official plugins are available:
+Here are the key features of my Parcel Management App:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Top Delivery Men Showcase:
+
+The home page features a visually appealing display of the top 5 delivery men.
+Full-page presentation with engaging animations to captivate users.
+## Comprehensive Parcel Listing:
+
+Explore all available parcels on the "All Parcels" page.
+Easy navigation and access to a wide range of parcel options.
+## User-Centric Parcel Management:
+
+Users have a personalized experience with their added and ordered parcels.
+Access a dedicated page to view and manage their parcel-related activities.
+## Empowered User Control:
+
+Users can update and delete their added parcels as needed.
+Seamless control over their listed items for a customized experience.
+## Efficient Search Functionality:
+
+The "All Parcels" page boasts an integrated search function.
+Users can filter parcels by name, making it convenient to find specific items.
