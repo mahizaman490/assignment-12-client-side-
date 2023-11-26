@@ -4,35 +4,35 @@
       "name": "John Doe",
       "image": "https://i.ibb.co/tqYvMSf/delivery-concept-portrait-happy-african-american-delivery-man-red-cloth-holding-box-package-isolated.jpg",
       "parcelsDelivered": 150,
-      "averageRatings": 4.5
+      "averageRatings": 5
     },
     {
       "id": 2,
       "name": "Jane Smith",
       "image": "https://i.ibb.co/yXtHZTg/delivery-man-red-t-shirt-cap-holding-white-board-looking-cheerful.jpg",
       "parcelsDelivered": 120,
-      "averageRatings": 4.2
+      "averageRatings": 4.5
     },
     {
       "id": 3,
       "name": "Sam Johnson",
       "image": "https://i.ibb.co/7z2566f/young-delivery-man-red-uniform-cap-holding-box-package-pizza-box-looking-front-smiling-showing-thumb.jpg",
       "parcelsDelivered": 110,
-      "averageRatings": 4.8
+      "averageRatings": 3.5
     },
     {
       "id": 4,
       "name": "Emily Davis",
       "image": "https://i.ibb.co/tPxfZhb/delivery-concept-portrait-happy-african-american-delivery-man-red-cloth-holding-box-package-isolated.jpg",
       "parcelsDelivered": 100,
-      "averageRatings": 4.4
+      "averageRatings": 3
     },
     {
       "id": 5,
       "name": "Michael Brown",
       "image": "https://i.ibb.co/3hkjFt8/male-courier-green-t-shirt-with-cap-holding-box-keeping-opened-hand.jpg",
       "parcelsDelivered": 95,
-      "averageRatings": 4.6
+      "averageRatings": 2.5
     }
   ]
   

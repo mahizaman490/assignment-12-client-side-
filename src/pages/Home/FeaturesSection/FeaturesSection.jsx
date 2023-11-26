@@ -11,8 +11,8 @@ const FeaturesSection = () => {
   return ( 
 <>
 
-<h1 className="text-xl md:text-6xl text-center mb-10 font-semibold bg-gradient-to-r from-green-900 via-green-500 to-green-100  text-transparent   bg-clip-text">Our Features </h1>
-    <div className='md:pt-24 md:pb-14'>
+<h1 className="text-xl md:text-6xl text-center mb-4 font-semibold bg-gradient-to-r from-green-400 to-green-300  text-transparent   bg-clip-text">Our Features </h1>
+    <div className='md:pt-24 '>
      
      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-8/12 mx-auto">
       {/* Feature Card 1 */}

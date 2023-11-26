@@ -1,6 +1,7 @@
 
 import Banner from "./Banner/Banner";
 import FeaturesSection from "./FeaturesSection/FeaturesSection";
+import TopDeliveryMans from "./TopDeliveryManSec/TopDeliveryMans";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
   
         <Banner></Banner>
          <FeaturesSection></FeaturesSection>
+         <TopDeliveryMans></TopDeliveryMans>
         </div>
     );
 };
