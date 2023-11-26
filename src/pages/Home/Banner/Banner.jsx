@@ -1,20 +1,30 @@
-
 const Banner = () => {
   return (
-    <div data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500" className="hero min-h-screen mb-24" style={{backgroundImage: 'url(https://i.ibb.co/QMjtdNh/closeup-courier-attaching-address-label-package-while-working-office.jpg)'}} >
-        <div className="hero-overlay bg-opacity-60" ></div>
-        <div className="hero-content text-center text-neutral-content" data-aos="flip-left"  data-aos-duration="3000">
-          <div className="max-w-md">
-         
-          <h1 className="mb-6 text-6xl bg-gradient-to-r from-green-500 via-green-300 to-green-100  text-transparent  bg-clip-text font-semibold">Safe transfer</h1>
-         
-            <input type="text" placeholder="Search here" className="input input-bordered input-success w-full max-w-xs mb-2" />
-            <p className="mb-4 bg-gradient-to-r from-green-500 via-green-300 to-green-100  text-transparent  bg-clip-text font-extrabold">Parcel Pro streamlines logistics with a user-friendly app. Effortlessly manage parcels, track deliveries, and optimize your operations for seamless efficiency.</p>
+    <div className="relative hero min-h-screen mb-24">
+      <img
+        src="https://i.ibb.co/QMjtdNh/closeup-courier-attaching-address-label-package-while-working-office.jpg"
+        alt="Banner Background"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 flex items-center justify-center text-center text-white">
+        <div data-aos="flip-left" data-aos-duration="3000">
+          <div className="max-w-md mx-auto">
+            <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-r from-green-500 via-green-300 to-green-100 text-transparent bg-clip-text ">
+              Safe transfer
+            </h1>
+            <input
+              type="text"
+              placeholder="Search here"
+              className="input input-bordered input-success w-full max-w-xs mb-4 mx-auto"
+            />
+            <p className="mb-8 text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-green-500 via-green-300 to-green-100 text-transparent bg-clip-text font-extrabold max-w-md mx-auto">
+              Parcel Pro streamlines logistics with a user-friendly app. Effortlessly manage parcels, track deliveries, and optimize your operations for seamless efficiency.
+            </p>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 
