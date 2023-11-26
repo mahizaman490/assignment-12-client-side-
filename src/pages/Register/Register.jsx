@@ -4,9 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import useAxiosPublic from "../../useAxiosPublic";
 
 const Register = () => {
-
+const axiosPublic = useAxiosPublic();
   const { createUser } = useContext(AuthContext)
   const [registerError, SetRegisterError] = useState('');
   const [registerSuccess, setregisterSuccess] = useState('');
@@ -33,11 +34,22 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         console.log(result.user)
+        const userInfo ={
+          mail:email
 
-        e.target.reset()
+
+        } 
+        axiosPublic.post('/users',userInfo)
+          .then(res =>{
+            if(res.data.insertedId){
+              console.log('user added database');
+                  e.target.reset()
         navigate('/')
            Swal.fire("welcome to our resturant!");
-        
+            }
+          })
+
+  
 
       })
       .catch(error => {
