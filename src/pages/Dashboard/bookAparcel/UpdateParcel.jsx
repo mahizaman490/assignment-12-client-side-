@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
 
-const BookAparcel = () => {
+const UpdateParcel = () => {
   const { user } = useContext(AuthContext);
 
   const calculatePrice = (weight) => {
@@ -46,7 +45,7 @@ const BookAparcel = () => {
     console.log(newBook);
 
     fetch('YOUR_API_ENDPOINT_HERE', {
-      method: 'POST',
+      method: 'POUT',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -65,7 +64,7 @@ const BookAparcel = () => {
     <div>
       <div className="p-24">
         <h2 className="text-3xl font-bold bg-gradient-to-r from-green-950 via-green-700 to-green-400 text-transparent bg-clip-text">
-          Book A Parcel
+          Update This Parcel
         </h2>
         <form onSubmit={handleAdd}>
           <div className="flex">
@@ -241,12 +240,11 @@ const BookAparcel = () => {
             </label>
           </div>
 
-          <input type="submit" value="Book" className="btn w-full mt-4 bg-gradient-to-r from-[#035317] to-green-600 text-white ..." />
+          <input type="submit" value="Update" className="btn w-full mt-4 bg-gradient-to-r from-[#035317] to-green-600 text-white ..." />
         </form>
       </div>
-  
     </div>
   );
 };
 
-export default BookAparcel;
+export default UpdateParcel;

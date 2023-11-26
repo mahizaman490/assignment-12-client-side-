@@ -12,6 +12,7 @@ import Dashboard from '../Layout/Dashboard';
 import BookAparcel from '../pages/Dashboard/bookAparcel/BookAparcel';
 import Myprofile from '../pages/Dashboard/Myprofile';
 import PrivateRoutes from '../private/PrivateRoutes';
+import UpdateParcel from '../pages/Dashboard/bookAparcel/UpdateParcel';
 
 
 export const router = createBrowserRouter([
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
     {
       path:'bookAparcel',
       element:<BookAparcel></BookAparcel>
+    },
+    {
+      path:'updateAparcel',
+      element:<UpdateParcel></UpdateParcel>
     },
     {
       path:'myProfile',
