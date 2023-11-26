@@ -35,7 +35,7 @@ const axiosPublic = useAxiosPublic();
       .then(result => {
         console.log(result.user)
         const userInfo ={
-          mail:email
+          email:email
 
 
         } 
@@ -45,7 +45,7 @@ const axiosPublic = useAxiosPublic();
               console.log('user added database');
                   e.target.reset()
         navigate('/')
-           Swal.fire("welcome to our resturant!");
+           Swal.fire("welcome to our website!");
             }
           })
 

@@ -4,9 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import useAxiosPublic from "../../useAxiosPublic";
 
 const LogIn = () => {
-
+  const axiosPublic = useAxiosPublic();
   const { signInUser,signInWithGoogle } = useContext(AuthContext);
   const [loginError,setLoginError] = useState('')
   
@@ -37,8 +38,24 @@ const LogIn = () => {
    signInWithGoogle() 
    .then(result =>{
     console.log(result.user)
-    Swal.fire("you logged in successfully!")
+    const userInfo ={
+      email: result.user?.email
+    } 
+ axiosPublic.post('/users',userInfo)
+
+.then(res=>{
+
+  if(res.data.insertedId){
+    console.log('user added database');
+     Swal.fire("you logged in successfully!")
     navigate('/')
+  }
+
+
+
+})
+
+   
    })
    .catch(error => {
     console.error(error)
