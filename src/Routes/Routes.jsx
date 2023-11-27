@@ -14,6 +14,7 @@ import Myprofile from '../pages/Dashboard/Myprofile';
 import PrivateRoutes from '../private/PrivateRoutes';
 import UpdateParcel from '../pages/Dashboard/bookAparcel/UpdateParcel';
 import Myparcels from '../pages/Dashboard/bookAparcel/Myparcels';
+import AllParcels from '../pages/admin/AllParcels';
 
 
 export const router = createBrowserRouter([
@@ -61,6 +62,13 @@ export const router = createBrowserRouter([
     {
       path:'bookings',
       element:<Myparcels></Myparcels>,
+      loader: () => fetch('http://localhost:5000/bookings')
+
+    },
+    ///testing for admin
+    {
+      path:'allParcels',
+      element:<AllParcels></AllParcels>,
       loader: () => fetch('http://localhost:5000/bookings')
 
     }
