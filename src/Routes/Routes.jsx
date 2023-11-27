@@ -97,6 +97,7 @@ export const router = createBrowserRouter([
     {
       path:'myDeliveryList',
       element:<MyDeliveryList></MyDeliveryList>,
+      loader: () => fetch('http://localhost:5000/bookings')
    
     },
     {

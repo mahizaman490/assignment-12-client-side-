@@ -1,11 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import BookingCard from "../BookingCard";
+import { useState } from "react";
 
 const Myparcels = () => {
 
-const bookings = useLoaderData()
+const loadedbookings = useLoaderData()
 
-
+const [bookings,setBookings] = useState(loadedbookings)
 
     return (
         <div>
@@ -37,7 +38,7 @@ const bookings = useLoaderData()
 
             <div>
                 {
-                    bookings.map(booking=><BookingCard key={booking._id} booking={booking}></BookingCard>)
+                    bookings.map(booking=><BookingCard key={booking._id} booking={booking} bookings={bookings} setBookings={setBookings} ></BookingCard>)
                 }
             </div>
         </div>
