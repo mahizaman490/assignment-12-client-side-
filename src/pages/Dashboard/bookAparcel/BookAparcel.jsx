@@ -33,6 +33,7 @@ const BookAparcel = () => {
       email: form.email.value,
       name: form.name.value,
       Receivers_Name: form.Receivers_Name.value,
+      Booking_Status: form.Booking_Status.value,
       price: price,
       Parcel_Weight: Parcel_Weight,
       Parcel_Type: form.Parcel_Type.value,
@@ -40,7 +41,7 @@ const BookAparcel = () => {
       Requested_Delivery_Date: form.Requested_Delivery_Date.value,
       Delivery_Address_Latitude: form.Delivery_Address_Latitude.value,
       Parcel_Delivery_Address: form.Parcel_Delivery_Address.value,
-      Delivery_Address_longitude: form.Delivery_Address_longitude.value,
+      Delivery_Address_longitude: form.Delivery_Address_longitude.value
     };
 
     console.log(newBook);
@@ -80,6 +81,19 @@ const BookAparcel = () => {
                   className="input input-bordered w-full"
                   defaultValue={user.displayName}
                   readOnly
+                />
+              </label>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">Booking_Status</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="text"
+                  name="Booking_Status"
+                  className="input input-bordered w-full"
+                  placeholder="Booking_Status"
                 />
               </label>
             </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BookingCard = ({ booking }) => {
-    const { _id,Parcel_Type, Requested_Delivery_Date } = booking;
+    const { _id,Parcel_Type, Requested_Delivery_Date,Booking_Status } = booking;
 
     // Auto-generate Booking Date using new Date()
 const handleDelete = _id =>{
@@ -51,7 +51,7 @@ Swal.fire({
                         <small className="mt-8 ml-2 font-semibold text-green-600">{Requested_Delivery_Date}</small>
                         <small className="mt-8 ml-2 font-semibold ">{bookingDate}</small> {/* Display Booking Date */}
                         <small className="mt-8 ml-2 font-semibold ">656364b67a7e42209fc1893c</small>
-                        <small className="mt-8 ml-2 font-semibold text-red-600">pending</small>
+                        <small className="mt-8 ml-2 font-semibold text-red-600">{Booking_Status}</small>
                         <Link to={`/dashboard/updateAparcel/${_id}`}>
                         <small className="mt-8 ml-2 font-semibold btn btn-sm">Update</small>
                         

@@ -11,13 +11,11 @@ const Myprofile = () => {
   };
 
   const handleUpload = () => {
-    // Perform the file upload logic here
+ 
     if (selectedFile) {
-      // You can use a service or API to handle the file upload to your server
-      // For simplicity, we'll just log the file details for now
+     
       console.log("Selected File:", selectedFile);
 
-      // TODO: Implement file upload to your server and update the user's profile picture
     } else {
       console.error("No file selected!");
     }
