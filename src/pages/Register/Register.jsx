@@ -35,9 +35,9 @@ const axiosPublic = useAxiosPublic();
       .then(result => {
         console.log(result.user)
         const userInfo ={
-          email:email
-
-
+          email:email,
+          role: 'user'
+        
         } 
         axiosPublic.post('/users',userInfo)
           .then(res =>{

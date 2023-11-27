@@ -41,7 +41,8 @@ const LogIn = () => {
     const userInfo ={
       email: result.user?.email,
       name:result.user?.displayName,
-      photoURL:result.user?.photoURL
+      photoURL:result.user?.photoURL,
+      role: 'user'
     } 
  axiosPublic.post('/users',userInfo)
 
@@ -57,7 +58,6 @@ console.log(res);
 
 
 })
-
    
    })
    .catch(error => {

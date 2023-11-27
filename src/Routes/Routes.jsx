@@ -91,7 +91,7 @@ export const router = createBrowserRouter([
     {
       path:'allUsers',
       element:<Allusers></Allusers>,
-      loader: () => fetch('http://localhost:5000/users')
+      loader: () => fetch('http://localhost:5000/users') //
     },
     /////deliveryman will see
     {
