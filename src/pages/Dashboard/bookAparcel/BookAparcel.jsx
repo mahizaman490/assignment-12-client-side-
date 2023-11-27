@@ -45,7 +45,7 @@ const BookAparcel = () => {
 
     console.log(newBook);
 
-    fetch('YOUR_API_ENDPOINT_HERE', {
+    fetch('http://localhost:5000/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -37,6 +37,7 @@ const Myprofile = () => {
           Update Profile
         </button>
       </div>
+    
     </div>
   );
 };

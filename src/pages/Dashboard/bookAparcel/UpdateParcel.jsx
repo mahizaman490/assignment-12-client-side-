@@ -55,7 +55,7 @@ const UpdateParcel = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          Swal.fire('Your parcel booked successfully!');
+          Swal.fire('Your parcel updated successfully!');
         }
       });
   };

@@ -13,6 +13,7 @@ import BookAparcel from '../pages/Dashboard/bookAparcel/BookAparcel';
 import Myprofile from '../pages/Dashboard/Myprofile';
 import PrivateRoutes from '../private/PrivateRoutes';
 import UpdateParcel from '../pages/Dashboard/bookAparcel/UpdateParcel';
+import Myparcels from '../pages/Dashboard/bookAparcel/Myparcels';
 
 
 export const router = createBrowserRouter([
@@ -55,6 +56,12 @@ export const router = createBrowserRouter([
     {
       path:'myProfile',
       element:<Myprofile></Myprofile>
+    },
+    {
+      path:'bookings',
+      element:<Myparcels></Myparcels>,
+      loader: () => fetch('http://localhost:5000/bookings')
+
     }
 
   ]

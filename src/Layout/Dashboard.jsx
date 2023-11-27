@@ -7,7 +7,7 @@ const Dashboard = () => {
                 <ul className="menu">
 
                     <li><NavLink to='/dashboard/bookAparcel'>Book a Parcel</NavLink></li>
-                    <li><NavLink to='/dashboard/myParcels'>My Parcels</NavLink></li>
+                    <li><NavLink to='/dashboard/bookings'>My Parcels</NavLink></li>
                     <li><NavLink to='/dashboard/myProfile'>My Profile </NavLink></li>
 
                 </ul>
