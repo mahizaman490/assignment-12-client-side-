@@ -17,12 +17,22 @@ Swal.fire({
     confirmButtonText: "Yes, cancel it!"
   }).then((result) => {
     if (result.isConfirmed) {
-    //   Swal.fire({
-    //     title: "canceled!",
-    //     text: "Your booking has been canceled.",
-    //     icon: "success"
-    //   });
-    console.log('delete confirmed');
+
+  fetch(`http://localhost:5000/bookings/${_id}`,{
+    method:'DELETE'
+  })
+  .then(res =>res.json())
+  .then(data =>{
+    console.log(data);
+    if(data.deletedCount>0){
+
+       Swal.fire({
+        title: "canceled!",
+        text: "Your booking has been canceled.",
+        icon: "success"
+      });
+    }
+  })
     }
   });
 
