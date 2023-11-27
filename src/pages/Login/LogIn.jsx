@@ -46,13 +46,14 @@ const LogIn = () => {
  axiosPublic.post('/users',userInfo)
 
 .then(res=>{
+console.log(res);
 
-  if(res.data.insertedId){
+    
     console.log('user added database');
      Swal.fire("you logged in successfully!")
-    navigate('/')
-  }
+  
 
+  navigate('/')
 
 
 })

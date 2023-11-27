@@ -41,12 +41,13 @@ const axiosPublic = useAxiosPublic();
         } 
         axiosPublic.post('/users',userInfo)
           .then(res =>{
-            if(res.data.insertedId){
+            console.log(res);
+            // if(res.data.insertedId){
               console.log('user added database');
                   e.target.reset()
         navigate('/')
            Swal.fire("welcome to our website!");
-            }
+            // }
           })
 
   

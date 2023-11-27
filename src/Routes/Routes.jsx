@@ -50,8 +50,9 @@ export const router = createBrowserRouter([
       element:<BookAparcel></BookAparcel>
     },
     {
-      path:'updateAparcel',
-      element:<UpdateParcel></UpdateParcel>
+      path:'updateAparcel/:id',
+      element:<UpdateParcel></UpdateParcel>,
+      loader:({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
     },
     {
       path:'myProfile',
