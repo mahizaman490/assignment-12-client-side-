@@ -1,6 +1,6 @@
 
 const AllParcelCard = ({allParcel}) => {
-    const { name,Requested_Delivery_Date,Booking_Status,Phone_Number,price } = allParcel;
+    const {name,Requested_Delivery_Date,Booking_Status,Phone_Number,price} = allParcel;
 
     return (
         <div>

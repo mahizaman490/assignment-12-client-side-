@@ -15,6 +15,11 @@ import PrivateRoutes from '../private/PrivateRoutes';
 import UpdateParcel from '../pages/Dashboard/bookAparcel/UpdateParcel';
 import Myparcels from '../pages/Dashboard/bookAparcel/Myparcels';
 import AllParcels from '../pages/admin/AllParcels';
+import Statistics from '../pages/admin/Statistics';
+import AllDeliveryMen from '../pages/admin/AllDeliveryMen';
+import Allusers from '../pages/admin/Allusers';
+import MyDeliveryList from '../pages/deliveryMan/MyDeliveryList';
+import MyReviews from '../pages/deliveryMan/MyReviews';
 
 
 export const router = createBrowserRouter([
@@ -71,6 +76,33 @@ export const router = createBrowserRouter([
       element:<AllParcels></AllParcels>,
       loader: () => fetch('http://localhost:5000/bookings')
 
+    },
+    {
+      path:'statistics',
+      element:<Statistics></Statistics>,
+      loader: () => fetch('http://localhost:5000/bookings')
+
+    },
+    {
+      path:'allDeliveryMan',
+      element:<AllDeliveryMen></AllDeliveryMen>,
+      loader: () => fetch('http://localhost:5000/allDeliveryMan')
+    },
+    {
+      path:'allUsers',
+      element:<Allusers></Allusers>,
+      loader: () => fetch('http://localhost:5000/users')
+    },
+    /////deliveryman will see
+    {
+      path:'myDeliveryList',
+      element:<MyDeliveryList></MyDeliveryList>,
+   
+    },
+    {
+      path:'myReviews',
+      element:<MyReviews></MyReviews>,
+   
     }
 
   ]
