@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Icon } from '@mui/material';
 
-import { IoNotifications } from "react-icons/io5";
+import { Button } from "@mui/material";
 const Navbar = () => {
   
   const { user, logOut } = useContext(AuthContext);
@@ -45,7 +47,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white">
           {navlinks}
-          <IoNotifications className="icon text-2xl mt-2"/>
+          <Icon component={NotificationsIcon} className="icon text-2xl mt-2" />
         </ul>
       </div>
       <div className="navbar-end md:ml-48 lg:ml-72 hidden md:block  ">
@@ -63,10 +65,14 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-            <a onClick={handleLogOut} className="btn  btn-sm ">LogOut</a>
+            <a onClick={handleLogOut} >  <Button variant="contained" color="secondary">
+  Logout
+</Button></a>
             </>
     : <Link to='login'>
-       <a className="btn  btn-sm ml-24 ">LogIn</a>
+       <a >  <Button variant="contained" color="error">
+  logIn
+</Button></a>
     </Link>
 
         }

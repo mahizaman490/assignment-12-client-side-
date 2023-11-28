@@ -3,6 +3,7 @@ import { FaShieldAlt, FaTruck, FaUser } from 'react-icons/fa';
 import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Button } from '@mui/material';
 // ..
 AOS.init();
 
@@ -31,7 +32,9 @@ const FeaturesSection = () => {
             Ensuring the safety and security of your parcels throughout the delivery process.
           </p>
           <div className="card-actions justify-center">
-            
+          <Button variant="contained" color="primary">
+  Book Now
+</Button>
           </div>
         </div>
       </div>
@@ -51,7 +54,9 @@ const FeaturesSection = () => {
             time.
           </p>
           <div className="card-actions justify-center">
-           
+          <Button variant="contained" color="primary">
+  Book Now
+</Button>
           </div>
         </div>
       </div>
@@ -68,7 +73,9 @@ const FeaturesSection = () => {
           <h2 className="card-title text-center">User Friendly</h2>
           <p>A user-friendly experience for easy parcel management and tracking.</p>
           <div className="card-actions justify-center">
-            
+          <Button variant="contained" color="primary">
+  Book Now
+</Button>
           </div>
         </div>
       </div>
