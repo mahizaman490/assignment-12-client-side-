@@ -1,10 +1,12 @@
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
 
 const BookingCard = ({ booking,bookings,setBookings }) => {
   const { _id, Parcel_Type, Requested_Delivery_Date, Booking_Status } = booking;
-
+  const { user } = useContext(AuthContext);
   const handleDelete = (_id) => {
     console.log(_id);
     Swal.fire({
@@ -40,6 +42,16 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
     });
   };
 
+
+  const handleSubmit = () =>{
+
+
+    Swal.fire("your review added successfully!")
+
+
+
+
+  }
   const bookingDate = new Date().toLocaleDateString();
 
   return (
@@ -74,8 +86,8 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
 <dialog id="my_modal_1" className="modal">
   <div className="modal-box">
     <h3 className="font-bold text-lg mb-2">Give review!</h3>
-    <input type="text" placeholder="Users Name" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
-    <input type="text" placeholder="Users image" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <input type="text" defaultValue={user?.displayName} className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <input type="text" defaultValue={user?.photoURL} className="input input-bordered mb-2 input-primary w-full max-w-xs" />
     <div className="px-2 mb-4">
                 <Rating
                     style={{ maxWidth: 180 }}
@@ -89,7 +101,7 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
     <div className="modal-action">
       <form method="dialog">
         {/* if there is a button in form, it will close the modal */}
- <input type="submit" value="Submit" className="btn btn-warning"/>
+ <input onClick={handleSubmit} type="submit" value="Submit" className="btn btn-warning"/>
       </form>
     </div>
   </div>
