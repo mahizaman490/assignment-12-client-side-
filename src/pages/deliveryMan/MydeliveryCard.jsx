@@ -1,9 +1,23 @@
+import Swal from "sweetalert2";
 
 
 const MydeliveryCard = ({deliveryList}) => {
-    const {Phone_Number,name,Receivers_Name,Receiver_Phone_Number,Requested_Delivery_Date,Parcel_Delivery_Address} = deliveryList;
+   
+  
+const {Phone_Number,name,Receivers_Name,Receiver_Phone_Number,Requested_Delivery_Date,Parcel_Delivery_Address} = deliveryList;
+
+const handleCancel = () =>{
+
+  Swal.fire("this percel has been canceled!");
+  
+}
+
+const handledeliver = () =>{
+  Swal.fire("this percel has been delivered!");
+
+}
     return (
-        <div className="card lg:card-side px-24">
+        <div className="card lg:card-side px-30">
         <div className="card-body">
           <div className="flex">
           
@@ -31,8 +45,8 @@ const MydeliveryCard = ({deliveryList}) => {
             </small>
            
             <small className="mt-8 ml-2 font-semibold btn btn-sm">View Location</small>
-            <small className="mt-8 ml-2 font-semibold btn btn-sm">Cancel </small>
-            <small className="mt-8 ml-2 font-semibold btn btn-sm">Deliver</small>
+            <small onClick={handleCancel} className="mt-8 ml-2 font-semibold btn btn-sm">Cancel </small>
+            <small onClick={handledeliver} className="mt-8 ml-2 font-semibold btn btn-sm">Deliver</small>
           </div>
         </div>
       </div>

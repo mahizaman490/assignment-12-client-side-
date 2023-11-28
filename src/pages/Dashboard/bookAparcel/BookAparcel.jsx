@@ -93,7 +93,7 @@ const BookAparcel = () => {
                   type="text"
                   name="Booking_Status"
                   className="input input-bordered w-full"
-                  placeholder="Booking_Status"
+                  placeholder="delivered/pending?"
                 />
               </label>
             </div>

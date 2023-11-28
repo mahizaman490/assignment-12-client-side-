@@ -103,7 +103,7 @@ export const router = createBrowserRouter([
     {
       path:'myReviews',
       element:<MyReviews></MyReviews>,
-   
+      loader: () => fetch('http://localhost:5000/users') //
     }
 
   ]

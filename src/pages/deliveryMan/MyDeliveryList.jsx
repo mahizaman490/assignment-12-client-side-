@@ -12,7 +12,7 @@ const MyDeliveryList = () => {
               My DeliveryList
             </h1>
                 <div>
-                <div className="card lg:card-side px-24">
+                <div className="card lg:card-side px-30">
 
 <div className="card-body ">
 
@@ -42,10 +42,6 @@ const MyDeliveryList = () => {
 {
 
 mydelivery.map(deliveryList=><MydeliveryCard deliveryList={deliveryList} key={deliveryList._id}></MydeliveryCard>)
-
-
-
-
 
 
 }

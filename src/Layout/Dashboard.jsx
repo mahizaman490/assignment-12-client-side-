@@ -69,9 +69,6 @@ sidebar */}
 Admin Will See - All Parcels, All Users, All Delivery Men, Statistics,
 menu in the sidebar */}
 
-
-
-
             </div>
             <div className="flex-1">
                 <Outlet></Outlet>

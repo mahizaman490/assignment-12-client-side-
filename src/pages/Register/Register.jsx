@@ -36,7 +36,7 @@ const axiosPublic = useAxiosPublic();
         console.log(result.user)
         const userInfo ={
           email:email,
-          role: 'user'
+          role: 'admin'
         
         } 
         axiosPublic.post('/users',userInfo)
