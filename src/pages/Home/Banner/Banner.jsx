@@ -1,4 +1,5 @@
 import { Button, TextField } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 
 const Banner = () => {
   return (
@@ -35,7 +36,7 @@ const Banner = () => {
             <p className="mb-8 text-lg md:text-xl lg:text-2xl bg-gradient-to-r from-green-500 via-green-300 to-green-100 text-transparent bg-clip-text font-extrabold max-w-md mx-auto">
               Parcel Pro streamlines logistics with a user-friendly app. Effortlessly manage parcels, track deliveries, and optimize your operations for seamless efficiency.
             </p>
-            <Button variant="contained" color="success">
+            <Button variant="contained" color="success" endIcon={<SendIcon />}>
   Get Started
 </Button>
           </div>

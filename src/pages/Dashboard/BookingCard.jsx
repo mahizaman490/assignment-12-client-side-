@@ -68,7 +68,12 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
               <small className="mt-8 ml-2 font-semibold btn btn-sm">Review</small>
             )}
             <small onClick={() => handleDelete(_id)} className="mt-8 ml-2 font-semibold btn btn-sm">Cancel</small>
-            <small className="mt-8 ml-2 font-semibold btn btn-sm">Pay</small>
+          <Link to='/dashboard/checkout'>
+          
+          <small className="mt-8 ml-2 font-semibold btn btn-sm">Pay</small>
+          
+          
+          </Link>
           </div>
         </div>
       </div>

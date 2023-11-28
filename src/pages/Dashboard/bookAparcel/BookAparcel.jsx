@@ -93,7 +93,9 @@ const BookAparcel = () => {
                   type="text"
                   name="Booking_Status"
                   className="input input-bordered w-full"
-                  placeholder="delivered/pending?"
+                 
+                  readOnly
+                  defaultValue='pending'
                 />
               </label>
             </div>

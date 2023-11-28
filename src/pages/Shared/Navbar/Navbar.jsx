@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Icon } from '@mui/material';
-
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import { Button } from "@mui/material";
 const Navbar = () => {
   
@@ -65,14 +65,14 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-            <a onClick={handleLogOut} >  <Button variant="contained" color="secondary">
+            <a onClick={handleLogOut} >  <Button variant="contained" color="error">
   Logout
-</Button></a>
+</Button></a>  
             </>
     : <Link to='login'>
-       <a >  <Button variant="contained" color="error">
+       <a >  <Button variant="contained" color="success">
   logIn
-</Button></a>
+</Button></a><Icon component={VpnKeyIcon} className="icon text-2xl mt-2 ml-2 text-white" />
     </Link>
 
         }

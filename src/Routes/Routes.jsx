@@ -20,6 +20,9 @@ import AllDeliveryMen from '../pages/admin/AllDeliveryMen';
 import Allusers from '../pages/admin/Allusers';
 import MyDeliveryList from '../pages/deliveryMan/MyDeliveryList';
 import MyReviews from '../pages/deliveryMan/MyReviews';
+import Checkout from '../pages/Dashboard/bookAparcel/Checkout';
+
+import Confettii from '../pages/Dashboard/bookAparcel/Confettii';
 
 
 export const router = createBrowserRouter([
@@ -53,60 +56,75 @@ export const router = createBrowserRouter([
   children:[
     {
       path:'bookAparcel',
-      element:<BookAparcel></BookAparcel>
+      element:<PrivateRoutes><BookAparcel></BookAparcel></PrivateRoutes>
     },
     {
       path:'updateAparcel/:id',
-      element:<UpdateParcel></UpdateParcel>,
+      element:<PrivateRoutes><UpdateParcel></UpdateParcel></PrivateRoutes>,
       loader:({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
     },
     {
       path:'myProfile',
-      element:<Myprofile></Myprofile>
+      element:<PrivateRoutes><Myprofile></Myprofile></PrivateRoutes>
     },
     {
       path:'bookings',
-      element:<Myparcels></Myparcels>,
+      element:<PrivateRoutes><Myparcels></Myparcels></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/bookings')
 
     },
     ///testing for admin
     {
       path:'allParcels',
-      element:<AllParcels></AllParcels>,
+      element:<PrivateRoutes><AllParcels></AllParcels></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/bookings')
 
     },
     {
       path:'statistics',
-      element:<Statistics></Statistics>,
+      element:<PrivateRoutes><Statistics></Statistics></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/bookings')
 
     },
     {
       path:'allDeliveryMan',
-      element:<AllDeliveryMen></AllDeliveryMen>,
+      element:<PrivateRoutes><AllDeliveryMen></AllDeliveryMen></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/allDeliveryMan')
     },
     {
       path:'allUsers',
-      element:<Allusers></Allusers>,
+      element:<PrivateRoutes><Allusers></Allusers></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/users') //
     },
     /////deliveryman will see
     {
       path:'myDeliveryList',
-      element:<MyDeliveryList></MyDeliveryList>,
+      element:<PrivateRoutes><MyDeliveryList></MyDeliveryList></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/bookings')
    
     },
     {
       path:'myReviews',
-      element:<MyReviews></MyReviews>,
+      element:<PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>,
       loader: () => fetch('http://localhost:5000/users') //
+    },
+    {
+      path:'checkout',
+      element:<Checkout></Checkout>,
+     
+    },
+   
+    {
+      path:'confettii',
+      element:<Confettii></Confettii>,
+     
     }
-
   ]
+
+
+
+
+
 }
 
 
