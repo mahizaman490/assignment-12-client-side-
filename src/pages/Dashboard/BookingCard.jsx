@@ -1,3 +1,4 @@
+import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -65,7 +66,42 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
               <small className="mt-8 ml-2 font-semibold btn btn-sm">Update</small>
             </Link>
             {Booking_Status === 'delivered' && (
-              <small className="mt-8 ml-2 font-semibold btn btn-sm">Review</small>
+              // <small className=""></small>
+<div>
+
+
+<button className="mt-8 ml-2 font-semibold btn btn-sm" onClick={()=>document.getElementById('my_modal_1').showModal()}>Review</button>
+<dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg mb-2">Give review!</h3>
+    <input type="text" placeholder="Users Name" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <input type="text" placeholder="Users image" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <div className="px-2 mb-4">
+                <Rating
+                    style={{ maxWidth: 180 }}
+                    value={5}
+                    readOnly
+                />
+            </div>
+    <input type="text" placeholder="Rating out of 5" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <input type="text" placeholder="Feedback" className="input input-bordered mb-2 input-primary w-full max-w-xs" />
+    <input type="text" defaultValue='656364b67a7e42209fc1893c' className="input input-bordered mb-2 input-primary w-full max-w-xs" readOnly/>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+ <input type="submit" value="Submit" className="btn btn-warning"/>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
+</div>
+
+
+              
             )}
             <small onClick={() => handleDelete(_id)} className="mt-8 ml-2 font-semibold btn btn-sm">Cancel</small>
           <Link to='/dashboard/checkout'>
