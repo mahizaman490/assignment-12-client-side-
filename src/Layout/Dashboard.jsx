@@ -17,7 +17,7 @@
 //     }, [axiosPublic, user?.email]);
 
 
-//     // fetch('http://localhost:5000/singleUser')
+//     // fetch('https://bd-parcel-management-server.vercel.app/singleUser')
 //     return (
 //         <div className="flex">
 

@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
     {
       path:'updateAparcel/:id',
       element:<PrivateRoutes><UpdateParcel></UpdateParcel></PrivateRoutes>,
-      loader:({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+      loader:({params}) => fetch(`https://bd-parcel-management-server.vercel.app/bookings/${params.id}`)
     },
     {
       path:'myProfile',
@@ -70,43 +70,43 @@ export const router = createBrowserRouter([
     {
       path:'bookings',
       element:<PrivateRoutes><Myparcels></Myparcels></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/bookings')
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/bookings')
 
     },
     ///testing for admin
     {
       path:'allParcels',
       element:<PrivateRoutes><AllParcels></AllParcels></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/bookings')
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/bookings')
 
     },
     {
       path:'statistics',
       element:<PrivateRoutes><Statistics></Statistics></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/bookings')
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/bookings')
 
     },
     {
       path:'allDeliveryMan',
       element:<PrivateRoutes><AllDeliveryMen></AllDeliveryMen></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/allDeliveryMan')
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/allDeliveryMan')
     },
     {
       path:'allUsers',
       element:<PrivateRoutes><Allusers></Allusers></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/users') //
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/users') //
     },
     /////deliveryman will see
     {
       path:'myDeliveryList',
       element:<PrivateRoutes><MyDeliveryList></MyDeliveryList></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/bookings')
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/bookings')
    
     },
     {
       path:'myReviews',
       element:<PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>,
-      loader: () => fetch('http://localhost:5000/users') //
+      loader: () => fetch('https://bd-parcel-management-server.vercel.app/users') //
     },
     {
       path:'checkout',

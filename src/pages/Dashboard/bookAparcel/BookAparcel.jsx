@@ -46,7 +46,7 @@ const BookAparcel = () => {
 
     console.log(newBook);
 
-    fetch('http://localhost:5000/bookings', {
+    fetch('https://bd-parcel-management-server.vercel.app/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

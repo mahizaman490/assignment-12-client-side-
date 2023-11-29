@@ -19,7 +19,7 @@ const BookingCard = ({ booking,bookings,setBookings }) => {
       confirmButtonText: "Yes, cancel it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/bookings/${_id}`, {
+        fetch(`https://bd-parcel-management-server.vercel.app/bookings/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

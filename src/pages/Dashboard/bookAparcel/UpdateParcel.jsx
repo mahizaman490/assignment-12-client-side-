@@ -54,7 +54,7 @@ const UpdateParcel = () => {
 
     console.log(updatedbooking);
 
-    fetch(`http://localhost:5000/bookings/${_id}`, {
+    fetch(`https://bd-parcel-management-server.vercel.app/bookings/${_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

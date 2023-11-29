@@ -6,7 +6,7 @@ const TopDeliveryMans = () => {
     const [deliveryMans, setDeliveryMans] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/topDelivered')
+        fetch('https://bd-parcel-management-server.vercel.app/topDelivered')
             .then(res => res.json())
             .then(data => {
                 // Sort deliveryMans by the number of parcels delivered in descending order
