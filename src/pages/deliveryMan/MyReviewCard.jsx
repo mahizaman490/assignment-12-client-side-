@@ -10,14 +10,14 @@ const MyReviewCard = (review) => {
         <div className="bg-[#F2FFE9] relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none transition-transform transform hover:scale-105">
             <div className="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                 <img
-                    src={user?.photoURL}
+                    src={user?.photoURL || 'https://i.ibb.co/T0P37Sq/Rectangle-4287-1.png'}
                     alt="tania andrew"
                     className="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
                 />
                 <div className="flex w-full flex-col gap-0.5">
                     <div className="flex items-center justify-between">
                         <h5 className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            {user?.displayName}
+                            {user?.displayName|| 'Mahi Zaman'}
                         </h5>
                         <div className="flex items-center gap-0 5">
                             {/* Dynamic ratings */}

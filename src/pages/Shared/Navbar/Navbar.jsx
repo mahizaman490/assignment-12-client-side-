@@ -21,7 +21,7 @@ const Navbar = () => {
   </>
 
   const nav2link = <>
-  <li><NavLink>{user?.displayName}</NavLink></li>
+  <li><NavLink>{user?.displayName|| 'MUAZ'}</NavLink></li>
     <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
 
     <li><NavLink onClick={handleLogOut} className="btn btn-warning  btn-sm ml-24">Logout</NavLink></li>
@@ -54,11 +54,11 @@ const Navbar = () => {
       
         {
             user ?.email ? <>
-            
+           
         <div className="flex">
           <div className="dropdown">
             <label tabIndex={0} className="btn rounded-full btn-ghost w-20 ">
-              <img className="rounded-full mt-4" src={user.photoURL} />
+              <img className="rounded-full mt-4" src={user?.photoURL|| 'https://i.ibb.co/vx2sph0/51793570-baby-shower-card-with-cute-baby-girl-in-bath-happy-toddler-splashing-water-vector-cartoon-g.jpg' } />
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               {nav2link}
