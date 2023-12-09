@@ -1,6 +1,6 @@
 My website name is: BD-parcel-management
 
-My website link: [http://localhost:5173]
+My website link: https://bd-parcel-management.web.app/
 
 Here are the key features of my Parcel Management App:
 ## 1 My website has 3 types of layouts separate for user, separate for admin, and separate for deliveryman. Only login users can access the dashboard
