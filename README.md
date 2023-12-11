@@ -1,9 +1,16 @@
 My website name is: BD-parcel-management
 
-My website link: [http://localhost:5173]
+My website link: https://bd-parcel-management.web.app/
+
+This is a Parcel Management App where people can book parcel to deliver.Admin can assign
+delivery person and delivery person delivers the percel.
+Duration: November 25,2023-November 29,2023
+• Created a full-stack MERN application for Product booking.
+• Implemented user authentication using Firebase authentication.
+• Utilized MongoDB for data storage and retrieval. 
 
 Here are the key features of my Parcel Management App:
-## 1 My website has 3 types of layouts separate for user, separate for admin, and separate for deliveryman. Only login users can access the dashboard
+ 1## My website has 3 types of layouts separate for user, separate for admin, and separate for deliveryman. Only login users can access the dashboard
 2## Clicking the Dashboard Menu in the navbar user will be
 redirected to the dashboard page. All the pages and routes in the
 dashboard are Private Routes. You will show pages and menus in the
